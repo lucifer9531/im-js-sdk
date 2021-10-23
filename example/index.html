@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../dist/websdk.umd.production.min.js"></script>
+  </head>
+
+  <body>
+  <button type='button' id='btn'>哈哈</button>
+    <script>
+      const default1 = new window.websdk.default({
+        url: 'ws://mk-dev.dustess.com/ws-kf-web',
+      });
+      const default2 = new window.websdk.default({
+        url: 'ws://mk-dev.dustess.com/ws-kf-web',
+      });
+  
+      console.log(default1 === default2)
+      default1.onBindAccount({
+        user: '',
+        account: 'W00000000018',
+        landingPage: 'w2222222',
+        acceptType: '333333',
+        type: '1' // 游客
+      });
+      console.log(default1);
+
+      document.getElementById('btn').onclick = function() {
+        default1.close();
+      }
+    </script>
+  </body>
+</html>
