@@ -1,12 +1,9 @@
 {
   "name": "customer-service-im-js-sdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple TypeScript SDK for online customer service",
+  "author": "IRIS",
   "license": "MIT",
-  "author": {
-    "name": "IRIS",
-    "email": "ruixijiejie@gmail.com"
-  },
   "main": "dist/index.js",
   "module": "dist/websdk.esm.js",
   "typings": "dist/index.d.ts",
